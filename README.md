@@ -1,5 +1,6 @@
 # Java Web App
 
+![image](./assets/1.png)
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
