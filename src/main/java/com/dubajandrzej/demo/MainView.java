@@ -1,6 +1,7 @@
 package com.dubajandrzej.demo;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
@@ -32,6 +33,7 @@ public class MainView extends VerticalLayout {
         var layout = new HorizontalLayout();
         layout.setAlignItems(Alignment.BASELINE);
         var addButton = new Button("Add");
+        addButton.addClickShortcut(Key.ENTER);
         addButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         layout.add(firstName, lastName, email, addButton);
         binder.bindInstanceFields(this);
