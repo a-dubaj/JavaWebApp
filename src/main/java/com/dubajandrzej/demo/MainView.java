@@ -2,6 +2,7 @@ package com.dubajandrzej.demo;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.TextField;
@@ -18,12 +19,14 @@ public class MainView extends VerticalLayout {
     private Grid<Person> grid = new Grid<>(Person.class);
     public MainView(PersonRepository repository) {
         this.repository = repository;
-
         add(getForm(), grid);
 
     }
 
     private Component getForm() {
-
+        var layout = new HorizontalLayout();
+        layout.setAlignItems(Alignment.BASELINE);
+        layout.add(firstName, lastName, email);
+        return layout;
     }
 }
