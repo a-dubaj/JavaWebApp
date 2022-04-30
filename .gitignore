@@ -82,7 +82,7 @@ fabric.properties
 # that are supposed to be shared within teams.
 
 .idea/*
-
+.idea
 !.idea/codeStyles
 !.idea/runConfigurations
 
@@ -113,7 +113,7 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
-
+.mvn
 # Eclipse m2e generated files
 # Eclipse Core
 .project
