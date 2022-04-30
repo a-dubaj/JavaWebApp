@@ -1,4 +1,7 @@
 package com.dubajandrzej.demo;
 
-public interface PersonRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PersonRepository extends JpaRepository<Person, Long> {
+
 }
