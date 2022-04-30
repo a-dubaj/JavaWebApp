@@ -21,4 +21,3 @@ To run this project:
 ```
 mvn clean -X install
 ```
-
