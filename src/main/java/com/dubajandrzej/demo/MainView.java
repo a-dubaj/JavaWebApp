@@ -1,5 +1,6 @@
 package com.dubajandrzej.demo;
 
+import com.helger.commons.exception.InitializationException;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -44,7 +45,7 @@ public class MainView extends VerticalLayout {
                 repository.save(person);
                 refreshGrid();
             } catch (ValidationException e) {
-                //
+                throw new InitializationException(e);
             }
         });
         return layout;
