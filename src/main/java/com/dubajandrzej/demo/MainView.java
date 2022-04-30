@@ -1,6 +1,8 @@
 package com.dubajandrzej.demo;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -20,14 +22,16 @@ public class MainView extends VerticalLayout {
 
     public MainView(PersonRepository repository) {
         this.repository = repository;
+        grid.setColumns("firstName", "lastName", "email");
         add(getForm(), grid);
-
     }
 
     private Component getForm() {
         var layout = new HorizontalLayout();
         layout.setAlignItems(Alignment.BASELINE);
-        layout.add(firstName, lastName, email);
+        var addButton = new Button("Add");
+        addButton.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
+        layout.add(firstName, lastName, email, addButton);
         return layout;
     }
 }
