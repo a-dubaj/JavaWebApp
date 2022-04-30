@@ -17,6 +17,7 @@ public class MainView extends VerticalLayout {
     private EmailField email = new EmailField("Email");
     private Binder<Person> binder = new Binder<>(Person.class);
     private Grid<Person> grid = new Grid<>(Person.class);
+
     public MainView(PersonRepository repository) {
         this.repository = repository;
         add(getForm(), grid);
